@@ -59,18 +59,6 @@ The global video game industry has evolved dramatically since the 1980s. This pr
   - In‐place (requires only O(log n) extra space for recursion)  
   - Widely used in practice with good pivot‐selection strategies
 
-### 🔁 Summary Comparison Table
-
-| Feature                    | Insertion Sort              | QuickSort                   |
-|----------------------------|-----------------------------|-----------------------------|
-| **Method**                 | Insert into sorted portion  | Divide & conquer via pivot  |
-| **Best Case**              | O(n) (sorted input)         | O(n log n) (balanced pivots)|
-| **Average Case**           | O(n²)                       | O(n log n)                  |
-| **Worst Case**             | O(n²)                       | O(n²) (poor pivot)          |
-| **Stability**              | ✅ Stable                  | ❌ Not guaranteed           |
-| **Memory Overhead**        | O(1) extra                  | O(log n) recursion stack    |
-| **Dataset Suitability**    | Small or nearly sorted      | Small and large             |
-
 
 ### 🔁 Comparison Focus
 
