@@ -38,25 +38,39 @@ The global video game industry has evolved dramatically since the 1980s. This pr
 
 ### 🧮 Insertion Sort
 
-- **Concept**: Builds the sorted array one element at a time by comparing and inserting each new element into its proper position.
+- **Approach**: Starts with the first element of the array and inserts each new element into its correct position within the already‐sorted left side.
+- **Ideal Use**: Best for **small** datasets or **nearly sorted** data.
 - **Time Complexity**:  
-  - Best Case: O(n) (nearly sorted data)  
-  - Average/Worst Case: O(n²)
-- **Advantages**:
-  - Simple and easy to implement
-  - Efficient for small or nearly sorted datasets
-  - Stable (preserves input order for equal keys)
+  - **Best Case**: O(n) – when the array is already sorted  
+  - **Average/Worst Case**: O(n²)
+- **Benefits**:
+  - Very simple to implement  
+  - Stable (preserves the order of equal elements)  
+  - Low overhead for tiny or almost‐sorted inputs
 
 ### ⚡ QuickSort
-
-- **Concept**: Divide-and-conquer algorithm that selects a 'pivot' element and partitions the array into subarrays that are recursively sorted.
+- **Approach**: Uses a **pivot** element to partition the array into “less than pivot” and “greater than pivot” subarrays, then recursively sorts each partition.
+- **Ideal Use**: Efficient on both **small** and **large** datasets.
 - **Time Complexity**:  
-  - Best/Average Case: O(n log n)  
-  - Worst Case: O(n²) (rare, can be optimized with pivot strategy)
-- **Advantages**:
-  - Much faster on large datasets
-  - In-place (low memory usage)
-  - Widely used in production systems
+  - **Best/Average Case**: O(n log n)  
+  - **Worst Case**: O(n²) – typically when the pivot choice is poor (e.g., already sorted data with naive pivot)
+- **Benefits**:
+  - Very fast on large, random datasets  
+  - In‐place (requires only O(log n) extra space for recursion)  
+  - Widely used in practice with good pivot‐selection strategies
+
+### 🔁 Summary Comparison Table
+
+| Feature                    | Insertion Sort              | QuickSort                   |
+|----------------------------|-----------------------------|-----------------------------|
+| **Method**                 | Insert into sorted portion  | Divide & conquer via pivot  |
+| **Best Case**              | O(n) (sorted input)         | O(n log n) (balanced pivots)|
+| **Average Case**           | O(n²)                       | O(n log n)                  |
+| **Worst Case**             | O(n²)                       | O(n²) (poor pivot)          |
+| **Stability**              | ✅ Stable                  | ❌ Not guaranteed           |
+| **Memory Overhead**        | O(1) extra                  | O(log n) recursion stack    |
+| **Dataset Suitability**    | Small or nearly sorted      | Small and large             |
+
 
 ### 🔁 Comparison Focus
 
@@ -67,14 +81,21 @@ We will compare these two algorithms by:
 - Analyzing performance for best, average, and worst-case inputs
 
 
-| Dataset Size | Insertion Sort Time | QuickSort Time |
-| ------------ | ------------------- | -------------- |
-| 100          | 0.012 sec           | 0.004 sec      |
-| 1,000        | 1.31 sec            | 0.05 sec       |
-| 10,000       | >10 sec             | 0.22 sec       |
+![image](https://github.com/user-attachments/assets/a6c04119-d342-496e-afaf-9512c35f0580)
+![image](https://github.com/user-attachments/assets/33ad993e-cd6d-4cec-9f3c-a2c4fc2b8a4a)
 
 ---
+### 🔁 Summary Comparison Table
 
+| Feature                    | Insertion Sort              | QuickSort                   |
+|----------------------------|-----------------------------|-----------------------------|
+| **Method**                 | Insert into sorted portion  | Divide & conquer via pivot  |
+| **Best Case**              | O(n) (sorted input)         | O(n log n) (balanced pivots)|
+| **Average Case**           | O(n²)                       | O(n log n)                  |
+| **Worst Case**             | O(n²)                       | O(n²) (poor pivot)          |
+| **Stability**              | ✅ Stable                  | ❌ Not guaranteed           |
+| **Memory Overhead**        | O(1) extra                  | O(log n) recursion stack    |
+| **Dataset Suitability**    | Small or nearly sorted      | Small and large             |
 
 <div align="center">
   ⚔️ Insertion Sort vs QuickSort – Who wins on the leaderboard? 🎮📊
